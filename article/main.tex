@@ -229,7 +229,7 @@ One final note on algorithm \ref{alg:combination}, by plain observation on the n
 Here's a demonstration of one iteration of $i$, to make the mechanics of algorithm \ref{alg:combination} even clearer.
 \begin{figure}[H]
 \centering
-\includegraphics[height=0.45\textwidth]{exampleparallelized.png}
+\includegraphics[height=0.45\textwidth]{figures/exampleparallelized.png}
 \caption{Demonstration the computations of three entries of $N_{i}$.}\label{normal_calibration.png}
 \end{figure}
 The figure demonstrates three different calculations and all applies different conditions in recursion \ref{eq:finalRecursion}. Firstly, in the right array $N_{i}$, see entry $N_{i}(4,2)$, the arrows from $N_{i-1}$ indicates that it is dependent on entries $N_{i-1}(4,1)$ and $N_{i-1}(1=4-z_{i},1)$ from array $N_{i-1}$. The reason is that the entry $N_{i}(4,2)$ considers more than one element of $z$ (i.e., $j>1$), and the sum $s=4$ is more than $z_{i}=3$ (i.e.,. $s>z_{i}$). Hence, by condition \ref{eq:Subrecursion3}, by adding $N_{i-1}(4,1)$ and $N_{i-1}(1=4-z_{i},1)$ one obtains $N_{i}(4,2)$ (i.e., $N_{i}(4,2)=N_{i-1}(4,1) +N_{i-1}(1=4-z_{i},1)$). 
@@ -271,9 +271,9 @@ In the first test (figure \ref{fig:noarmalS}), $n=m=200$ and $n_{bin}=10,50,100,
 \FloatBarrier
 \begin{figure}[!tbp]
   \centering
-  \subfloat[Run time with $n_{bin}$(bin number) as a variable.]{\includegraphics[width=0.5\textwidth]{normal_S.png}\label{fig:noarmalS}}
+  \subfloat[Run time with $n_{bin}$(bin number) as a variable.]{\includegraphics[width=0.5\textwidth]{figures/normal_S.png}\label{fig:noarmalS}}
   \hfill
-  \subfloat[Run time with $n$(sample size) as a variable.]{\includegraphics[width=0.5\textwidth]{normal_N.png}\label{fig:normalN}}
+  \subfloat[Run time with $n$(sample size) as a variable.]{\includegraphics[width=0.5\textwidth]{figures/normal_N.png}\label{fig:normalN}}
   \caption{Run time experiments.}
 \end{figure}
 \FloatBarrier
@@ -284,16 +284,16 @@ In both cases, the parallelized version has almost constant run time, and this i
 The distributions used are $A \sim \mathcal{N}(0,1)$ and $B \sim \mathcal{N}(\mu,1)$ where $\boldsymbol{\mu} = \{0, 0.2, 0.4, \ldots, 1.8, 2.0 \}$(i.e., performing $11$ experiments.). For all $\mu \in \boldsymbol{\mu}$, 21 different bin sizes are tested $n_{bin}=\{10,12,14,\ldots,38,40\}$. For each bin size, the difference and relative error of the $p$-value between $t$-test and exact test (i.e., $p_{exact}-p_{t-test}$  and $\frac{p_{exact}-p_{t-test}}{p_{t-test}}$) are plotted against $n_{bin}$. Furthermore, these following hyperparameters for each experiment: the set size for both $A$ and $B$ is $100$ (i.e., $|A|=|B|=100$.), and the sample size is $70$.
 \begin{figure}[H]
   \centering
-  \subfloat[Boxplot of the relative error with bin size as varaible.]{\includegraphics[width=0.5\textwidth]{box_plot_Diff_rel_2.jpg}\label{fig:noarmalS}}
+  \subfloat[Boxplot of the relative error with bin size as varaible.]{\includegraphics[width=0.5\textwidth]{figures/box_plot_Diff_rel_2.jpg}\label{fig:noarmalS}}
   \hfill
-  \subfloat[Errorplot of the relative error with bin size as varaible.]{\includegraphics[width=0.5\textwidth]{error_plot_Diff_rel_2.jpg}\label{fig:normalN}}
+  \subfloat[Errorplot of the relative error with bin size as varaible.]{\includegraphics[width=0.5\textwidth]{figures/error_plot_Diff_rel_2.jpg}\label{fig:normalN}}
   \caption{Relative error vs Bin size}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \subfloat[Boxplot of the relative error with bin size as varaible.]{\includegraphics[width=0.5\textwidth]{box_plot_Diff_rel_6.jpg}\label{fig:noarmalS}}
+  \subfloat[Boxplot of the relative error with bin size as varaible.]{\includegraphics[width=0.5\textwidth]{figures/box_plot_Diff_rel_6.jpg}\label{fig:noarmalS}}
   \hfill
-  \subfloat[Errorplot of the relative error with bin size as varaible.]{\includegraphics[width=0.5\textwidth]{error_plot_Diff_rel_6.jpg}\label{fig:normalN}}
+  \subfloat[Errorplot of the relative error with bin size as varaible.]{\includegraphics[width=0.5\textwidth]{figures/error_plot_Diff_rel_6.jpg}\label{fig:normalN}}
   \caption{Relative error vs Bin size}
 \end{figure}
 {\bibliography{sample.bib}}
